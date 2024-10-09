@@ -175,6 +175,13 @@ def get_clients():
     return jsonify(result)
 
 
+# Endpoint to query a single client
+@app.route("/client/<id>", methods=["GET"])
+def get_client(id):
+    client = Clients.query.get(id)
+    return client_schema.jsonify(client)
+
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
