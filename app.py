@@ -216,6 +216,14 @@ def update_client(id):
     return client_schema.jsonify(client)
 
 
+# Endpoint for deleting a client
+@app.route("/client/<id>", methods=["DELETE"])
+def delete_client(id):
+    client = Clients.query.get(id)
+    db.session.delete(client)
+    db.session.commit()
+    
+    return "Client was successfully deleted"
 
 
 if __name__ == "__main__":
