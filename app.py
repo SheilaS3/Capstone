@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, jsonify
+from flask import Flask, render_template, url_for, redirect, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
@@ -38,14 +38,14 @@ class Clients(db.Model):
     name = db.Column(db.String(80), unique = False)
     lastname = db.Column(db.String(80), unique = False)
     id_number = db.Column(db.Integer, unique = True)
-    id_number_expiry_date = db.Column(db.Numeric(20), unique = False)
+    id_number_expiry_date = db.Column(db.String(20), unique = False)
     country = db.Column(db.String(50), unique = False)
-    country_risk = db.Column(db.Numeric(1), unique = False)
-    pep = db.Column(db.Numeric(1), unique = False)
+    country_risk = db.Column(db.String(3), unique = False)
+    pep = db.Column(db.String(3), unique = False)
     activity = db.Column(db.String(100), unique = False)
     funds_origin = db.Column(db.String(100), unique = False)
-    contract_date = db.Column(db.Numeric(20), unique = False)
-    assigned_risk = db.Column(db.Numeric(1), unique = False)
+    contract_date = db.Column(db.String(20), unique = False)
+    assigned_risk = db.Column(db.String(10), unique = False)
     
     
     def __init__(self, person_type, name, lastname, id_number, id_number_expiry_date, country, country_risk, pep, activity, funds_origin, contract_date, assigned_risk):
@@ -139,6 +139,33 @@ def register():
         return redirect(url_for('login'))
     
     return render_template("register.html", form=form)
+
+
+# Endpoint to create a new client
+@app.route("/client", methods=["POST"])
+def add_client():
+    person_type = request.json["person_type"]
+    name = request.json["name"]
+    lastname = request.json["lastname"]
+    id_number = request.json["id_number"]
+    id_number_expiry_date = request.json["id_number_expiry_date"]
+    country = request.json["country"]
+    country_risk = request.json["country_risk"]
+    pep = request.json["pep"]
+    activity = request.json["activity"]
+    funds_origin = request.json["funds_origin"]
+    contract_date = request.json["contract_date"]
+    assigned_risk = request.json["assigned_risk"]
+    
+    new_client = Clients(person_type, name, lastname, id_number, id_number_expiry_date, country, country_risk, pep, activity, funds_origin, contract_date, assigned_risk)
+    
+    db.session.add(new_client)
+    db.session.commit()
+    
+    client = Clients.query.get(new_client.id)
+    
+    return client_schema.jsonify(client)
+
 
 
 if __name__ == "__main__":
