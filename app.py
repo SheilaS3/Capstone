@@ -167,6 +167,13 @@ def add_client():
     return client_schema.jsonify(client)
 
 
+# Endpoint to query all clients
+@app.route("/clients", methods=["GET"])
+def get_clients():
+    all_clients = Clients.query.all()
+    result = clients_schema.dump(all_clients)
+    return jsonify(result)
+
 
 if __name__ == "__main__":
     with app.app_context():
