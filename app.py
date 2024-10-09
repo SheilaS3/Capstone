@@ -1,10 +1,12 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
 from flask_bcrypt import Bcrypt
+from flask_marshmallow import Marshmallow
+import os 
 
 
 app = Flask(__name__)
@@ -12,6 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'thisisasecretkey'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+ma = Marshmallow(app)
 
 
 login_manager = LoginManager()
@@ -27,6 +30,38 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
+    
+
+class Clients(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    person_type = db.Column(db.String(20), unique = False)
+    name = db.Column(db.String(80), unique = False)
+    lastname = db.Column(db.String(80), unique = False)
+    id_number = db.Column(db.Integer, unique = True)
+    id_number_expiry_date = db.Column(db.Numeric(20), unique = False)
+    country = db.Column(db.String(50), unique = False)
+    country_risk = db.Column(db.Numeric(1), unique = False)
+    pep = db.Column(db.Numeric(1), unique = False)
+    activity = db.Column(db.String(100), unique = False)
+    funds_origin = db.Column(db.String(100), unique = False)
+    contract_date = db.Column(db.Numeric(20), unique = False)
+    assigned_risk = db.Column(db.Numeric(1), unique = False)
+    
+    
+    def __init__(self, person_type, name, lastname, id_number, id_number_expiry_date, country, country_risk, pep, activity, funds_origin, contract_date, assigned_risk):
+        self.person_type = person_type
+        self.name = name
+        self.lastname = lastname
+        self.id_number = id_number
+        self.id_number_expiry_date = id_number_expiry_date
+        self.country = country
+        self.country_risk = country_risk
+        self.pep = pep
+        self.activity = activity
+        self.funds_origin = funds_origin
+        self.contract_date = contract_date
+        self.assigned_risk = assigned_risk
+        
     
 
 class RegisterForm(FlaskForm):
