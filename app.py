@@ -182,6 +182,42 @@ def get_client(id):
     return client_schema.jsonify(client)
 
 
+# Endpoint for updating a client
+@app.route("/client/<id>", methods=["PUT"])
+def update_client(id):
+    client = Clients.query.get(id)
+    person_type = request.json["person_type"]
+    name = request.json["name"]
+    lastname = request.json["lastname"]
+    id_number = request.json["id_number"]
+    id_number_expiry_date = request.json["id_number_expiry_date"]
+    country = request.json["country"]
+    country_risk = request.json["country_risk"]
+    pep = request.json["pep"]
+    activity = request.json["activity"]
+    funds_origin = request.json["funds_origin"]
+    contract_date = request.json["contract_date"]
+    assigned_risk = request.json["assigned_risk"]
+    
+    client.person_type = person_type
+    client.name = name
+    client.lastname = lastname
+    client.id_number = id_number
+    client.id_number_expiry_date = id_number_expiry_date
+    client.country = country
+    client.country_risk = country_risk
+    client.pep = pep
+    client.activity = activity
+    client.funds_origin = funds_origin
+    client.contract_date = contract_date
+    client.assigned_risk = assigned_risk
+    
+    db.session.commit()
+    return client_schema.jsonify(client)
+
+
+
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
