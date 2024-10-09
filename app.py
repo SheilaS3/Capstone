@@ -62,7 +62,6 @@ class Clients(db.Model):
         self.contract_date = contract_date
         self.assigned_risk = assigned_risk
         
-    
 
 class RegisterForm(FlaskForm):
     username = StringField(validators=[InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
@@ -85,6 +84,15 @@ class LoginForm(FlaskForm):
     password = PasswordField(validators=[InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
 
     submit = SubmitField('Login')
+    
+
+class ClientsSchema(ma.Schema):
+    class Meta:
+        fields = ("person_type", "name", "lastname", "id_number", "id_number_expiry_date", "country", "country_risk", "pep", "activity", "funds_origin", "contract_date", "assigned_risk")
+        
+        
+client_schema = ClientsSchema()
+clients_schema = ClientsSchema(many = True)
 
 
 @app.route("/")
