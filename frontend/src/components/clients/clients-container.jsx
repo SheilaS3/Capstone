@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import IndividualClient from "./individual-client";
 
@@ -17,6 +18,15 @@ export default class ClientsContainer extends Component {
         };
 
         this.handleFilter = this.handleFilter.bind(this);
+        this.getClients = this.getClients.bind(this);
+    }
+
+    getClients() {
+        axios.get("http://localhost:5000/clients").then(response => {
+            console.log("response data", response);
+        }).catch(error => {
+            console.log("getclients error", error); 
+        });
     }
 
     handleFilter(filter) {
@@ -37,6 +47,8 @@ export default class ClientsContainer extends Component {
         if (this.state.isLoading) {
             return <div>Loading...</div>;
         }
+
+        this.getClients();
 
         return (
             <div>

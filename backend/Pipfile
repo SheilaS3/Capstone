@@ -13,6 +13,7 @@ wtforms = "*"
 email-validator = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+flask-cors = "*"
 
 [dev-packages]
 
