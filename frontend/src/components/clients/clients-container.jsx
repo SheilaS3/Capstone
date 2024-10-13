@@ -39,11 +39,18 @@ export default class ClientsContainer extends Component {
             return (
                 <IndividualClient 
                     key={client.id_number} 
-                    title={client.name} 
+                    title={client.name}
+                    lastname={client.lastname} 
                     activity={client.activity}
+                    contract_date={client.contract_date}
+                    funds={client.funds_origin}
                     person={client.person_type}
                     risk={client.assigned_risk}
-                    id_expiration={client.id_number_expiry_date} 
+                    id_number={client.id_number}
+                    id_expiration={client.id_number_expiry_date}
+                    country={client.country}
+                    country_risk={client.country_risk}
+                    pep={client.pep}  
                     slug={client.id_number} 
                 />
             );
