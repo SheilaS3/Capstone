@@ -25,18 +25,17 @@ class App extends Component {
             <div className='app'>
                 <Router>
                     <div>
-                    <NavigationContainer />
+                        <NavigationContainer />
 
-                    <Routes>
-                        <Route path="/" element={<Home/>} />
-                        <Route path="/about" element={<About/>} />
-                        <Route path="/contact" element={<Contact/>} />
+                        <Routes>
+                            <Route path="/" element={<Home/>} />
+                            <Route path="/about" element={<About/>} />
+                            <Route path="/contact" element={<Contact/>} />
 
 
-                        <Route path="/clients" element={<Clients/>} />
-                        <Route path="/not-found" element={<NotFound/>} />
-                    </Routes>
-                        
+                            <Route path="/clients" element={<Clients/>} />
+                            <Route path="/not-found" element={<NotFound/>} />
+                        </Routes>
                     </div>
                 </Router>
             </div>

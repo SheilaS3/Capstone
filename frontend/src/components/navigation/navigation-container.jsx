@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from "../../assets/logo-transparent.png"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 export default class NavigationContainer extends Component {
     render() {
         return (
@@ -45,7 +48,13 @@ export default class NavigationContainer extends Component {
                 </div>
 
                 <div className='right-side'>
-                    
+                    <div className='login'>
+                        Login
+                    </div>
+
+                    <div className='icon'>
+                        <FontAwesomeIcon icon="fa-right-to-bracket" />
+                    </div>
                 </div>
                 
             </div>

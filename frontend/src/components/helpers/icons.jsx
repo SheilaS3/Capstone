@@ -1,6 +1,7 @@
 import { 
     faBuilding,
     faUser,
+    faRightToBracket,
     faTrash, 
     faSignOutAlt,
     faEdit,
@@ -16,6 +17,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 const Icons = () => {
     return library.add(
         faBuilding,
+        faRightToBracket,
         faUser,
         faTrash,
         faSignOutAlt,

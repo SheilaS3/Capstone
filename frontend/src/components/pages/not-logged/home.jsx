@@ -8,7 +8,7 @@ export default class Home extends Component {
         return (
             <div>
                 <div className='home-wrapper'>
-                    <div className='leftt-column'>
+                    <div className='left-column'>
                         <h2>Know Your Client Application</h2>
                         
                         <div>
