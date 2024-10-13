@@ -10,9 +10,9 @@ export default class ClientsContainer extends Component {
             pageTitle: "Total Clients Page",
             isLoading: false,
             data: [
-                { title: "Google", assigned_risk: "Low" },
-                { title: "Mercedes", assigned_risk: "Medium" },
-                { title: "Felix", assigned_risk: "High" }
+                { title: "Google", assigned_risk: "Low", slug: "google" },
+                { title: "Mercedes", assigned_risk: "Medium", slug: "mercedes" },
+                { title: "Felix", assigned_risk: "High", slug: "felix" }
             ]
         };
 
@@ -29,7 +29,7 @@ export default class ClientsContainer extends Component {
 
     clients() {
         return this.state.data.map(client => {
-            return <IndividualClient title={client.title} />;
+            return <IndividualClient title={client.title} slug={client.slug} />;
         })
     }
 

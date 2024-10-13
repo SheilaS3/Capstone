@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function(props) {
+function IndividualClient(props) {
     return (
         <div>
             <h3>{props.title}</h3>
+
+            <Link to={`/clients/${props.slug}`}>Link</Link>
         </div>
     );
 }
+
+export default IndividualClient;
