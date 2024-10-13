@@ -6,12 +6,14 @@ import NavigationContainer from './navigation/navigation-container';
 import Home from './pages/not-logged/home';
 import About from './pages/not-logged/about';
 import Contact from './pages/not-logged/contact';
+import Login from './pages/not-logged/login';
 
 
 import Clients from './pages/logged/clients';
 import Icons from './helpers/icons';
 import ClientDetail from './pages/logged/client-detail';
 import NotFound from './pages/not-found';
+
 
 
 
@@ -33,6 +35,7 @@ class App extends Component {
                             <Route exact path="/" element={<Home/>} />
                             <Route path="/about" element={<About/>} />
                             <Route path="/contact" element={<Contact/>} />
+                            <Route path="/login" element={<Login/>} />
 
 
                             <Route path="/clients" element={<Clients/>} />
