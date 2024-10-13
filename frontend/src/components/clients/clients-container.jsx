@@ -8,13 +8,8 @@ export default class ClientsContainer extends Component {
         super();
 
         this.state = {
-            pageTitle: "Total Clients Page",
             isLoading: false,
-            data: [
-                { title: "Google", assigned_risk: "Low", slug: "google" },
-                { title: "Mercedes", assigned_risk: "Medium", slug: "mercedes" },
-                { title: "Felix", assigned_risk: "High", slug: "felix" }
-            ]
+            data: []
         };
 
         this.handleFilter = this.handleFilter.bind(this);
@@ -23,9 +18,11 @@ export default class ClientsContainer extends Component {
 
     getClients() {
         axios.get("http://localhost:5000/clients").then(response => {
-            console.log("response data", response);
+            this.setState({
+                data: response.data
+            });
         }).catch(error => {
-            console.log("getclients error", error); 
+            console.log("getclients error", error);
         });
     }
 
@@ -39,8 +36,22 @@ export default class ClientsContainer extends Component {
 
     clients() {
         return this.state.data.map(client => {
-            return <IndividualClient title={client.title} slug={client.slug} />;
+            return (
+                <IndividualClient 
+                    key={client.id_number} 
+                    title={client.name} 
+                    activity={client.activity}
+                    person={client.person_type}
+                    risk={client.assigned_risk}
+                    id_expiration={client.id_number_expiry_date} 
+                    slug={client.id_number} 
+                />
+            );
         })
+    }
+
+    componentDidMount() {
+        this.getClients();
     }
 
     render() {
@@ -48,14 +59,8 @@ export default class ClientsContainer extends Component {
             return <div>Loading...</div>;
         }
 
-        this.getClients();
-
         return (
             <div>
-                <h2>
-                    {this.state.pageTitle}
-                </h2>
-
                 <button onClick={() => this.handleFilter("Low")}>Low</button>
                 <button onClick={() => this.handleFilter("Medium")}>Medium</button>
                 <button onClick={() => this.handleFilter("High")}>High</button>

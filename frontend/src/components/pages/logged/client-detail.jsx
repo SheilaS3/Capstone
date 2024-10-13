@@ -14,6 +14,7 @@ function ClientDetail(props) {
             </div>
 
             <div>
+                "id":
                 "activity": 
                 "assigned_risk": 
                 "contract_date": 
