@@ -9,13 +9,13 @@ export default class Contact extends Component {
                 <div className='contact-wrapper'>
                     <div className='left-column'>                       
                         <div className='slogan'>
-                            Let's change the way we KYC. 
+                            Let's change <b>the way we <span style={{color: "#04b39d"}}>KYC</span></b>. 
                         </div>
                     </div>
                     
                     <div className='right-column'>
-                       <div>
-                            CONTACT US FOR MORE INFO
+                       <div className='contact-title'>
+                            <h1>CONTACT US FOR MORE INFO</h1>
                        </div>
 
                        <div className='phone'>

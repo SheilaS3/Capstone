@@ -9,7 +9,7 @@
     .left-column {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 70px 40px;
+        padding: 70px 40px 70px 70px;
 
         .title {
             font-size: 1.5em;
@@ -22,6 +22,7 @@
                 text-decoration: none;
                 color: $light-green;
                 font-weight: 800;
+                font-size: 1.1em;
             }
         }
     }
