@@ -9,10 +9,12 @@ export default class Home extends Component {
             <div>
                 <div className='home-wrapper'>
                     <div className='left-column'>
-                        <h2>Know Your Client Application</h2>
+                        <div className='title'>
+                            <h1>Know Your Client Application</h1>
+                        </div>
                         
-                        <div>
-                            Discover More <Link to="/about">About Us</Link>
+                        <div className='sub-title'>
+                            <h3>Discover More <Link to="/about">About Us</Link></h3>
                         </div>
                     </div>
                     
@@ -23,7 +25,7 @@ export default class Home extends Component {
                             </div>
 
                             <div className='text'>
-                                Legal Person
+                                <h3>Legal Person</h3>
                             </div>
                         </div>
                         
@@ -33,7 +35,7 @@ export default class Home extends Component {
                             </div>
 
                             <div className='text'>
-                                Natural Person
+                                <h3>Natural Person</h3>
                             </div>
                         </div>
                     </div>
