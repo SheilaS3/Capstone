@@ -1,0 +1,38 @@
+.about-wrapper {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 42px;
+    height: 100vh-14.5;
+    align-content: space-around;
+
+    .left-column {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 70px 100px;
+        font-size: 3em;
+    }
+
+    .right-column {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 70px;
+        padding: 0px 90px 0px 0px;
+
+        .top-paragraph {
+            align-content: center;
+            font-size: 2em;
+            border: 5px solid $light-green;
+            padding: 30px;
+        }
+
+        .bottom-paragraph {
+            align-content: center;
+            font-size: 2em;
+            border: 5px solid $light-green;
+            padding: 30px;
+        }
+
+    }
+}
+
