@@ -3,4 +3,7 @@ body {
     font-family: "Mulish", sans-serif;
 }
 
-  
+#root {
+    display: grid;
+    grid-template-columns: 1fr;
+}

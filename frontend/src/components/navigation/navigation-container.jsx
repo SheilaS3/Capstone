@@ -12,7 +12,7 @@ export default class NavigationContainer extends Component {
                 <div className='left-side'>
 
                     <div className='logo'>
-                        <img src={logo} width={75} height={75} />
+                        <img src={logo} width={60} height={60} />
                     </div>
 
                     <div className='links'>
