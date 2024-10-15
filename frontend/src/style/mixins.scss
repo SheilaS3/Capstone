@@ -1,0 +1,48 @@
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    width: 40%;
+    font-family: "Mulish", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.5s ease-in-out;
+    background-color: $black;
+    color: white;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $light-green;
+    }
+}
+
+@mixin input-element {
+    input {
+        font-family: "Mulish", sans-serif;
+        color: $black;
+        padding: 5px 0px;
+        width: 50%;
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom: 1px solid $black;
+        background-color: transparent;
+        transition: 0.5s all ease-in-out;
+        font-size: 1.1em;
+        margin-bottom: 21px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $light-green;
+        }
+    }
+}
+
+@mixin base-grid() {
+    display: grid;
+    row-gap: 21px;
+    column-gap: 21px;
+}

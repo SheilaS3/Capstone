@@ -1,0 +1,32 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        text-align: center;
+        padding: 70px 0px 0px 0px;
+        font-size: 1.2em;
+    }
+
+    .login-form-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include input-element();
+        grid-gap: 40px;
+        padding: 50px 400px 0px 740px;
+
+        .form-group {
+            display: flex;
+
+            svg {
+                font-size: 2em;
+                color: $light-green;
+                margin-right: 15px;
+            }
+        }
+
+        .btn {
+            margin-left: 70px;
+        }
+    }
+}
