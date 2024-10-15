@@ -13,26 +13,38 @@ export default class ClientsContainer extends Component {
         };
 
         this.handleFilter = this.handleFilter.bind(this);
-        this.getClients = this.getClients.bind(this);
+        
     }
 
-    getClients() {
-        axios.get("http://localhost:5000/clients").then(response => {
-            this.setState({
-                data: response.data
-            });
-        }).catch(error => {
+    handleFilter(filter) {
+        if (filter === "CLEAR_FILTERS") {
+            this.getClients();
+        } else {
+            this.getClients(filter);
+        }
+    }
+
+    getClients(filter = null) {
+        axios.get("http://localhost:5000/clients")
+        .then(response => {
+            if (filter) {
+                this.setState({
+                    data: response.data.filter(item => {
+                        return item.assigned_risk === filter; 
+                    })
+                });
+            } else {
+                this.setState({
+                    data: response.data
+                });
+            }
+        })
+        .catch(error => {
             console.log("getclients error", error);
         });
     }
 
-    handleFilter(filter) {
-        this.setState({
-            data: this.state.data.filter(client => {
-                return client.assigned_risk === filter;
-            })
-        });
-    }
+    
 
     clients() {
         return this.state.data.map(client => {
@@ -55,12 +67,40 @@ export default class ClientsContainer extends Component {
         }
 
         return (
-            <div>
-                <button onClick={() => this.handleFilter("Low")}>Low</button>
-                <button onClick={() => this.handleFilter("Medium")}>Medium</button>
-                <button onClick={() => this.handleFilter("High")}>High</button>
+            <div className="clients-wrapper">    
+                <div className="filter-links">
+                    <button 
+                        className='btn'
+                        onClick={() => this.handleFilter("Low")}
+                    >
+                        Low
+                    </button>
 
-                {this.clients()}
+                    <button
+                        className='btn' 
+                        onClick={() => this.handleFilter("Medium")}
+                    >
+                        Medium
+                    </button>
+
+                    <button 
+                        className='btn'
+                        onClick={() => this.handleFilter("High")}
+                    >
+                        High
+                    </button>
+
+                    <button 
+                        className='btn' 
+                        onClick={() => this.handleFilter("CLEAR_FILTERS")}
+                    >
+                        All
+                    </button>                    
+                </div>
+
+                <div className="individual-clients-grid-wrapper">
+                    {this.clients()}
+                </div>
             </div>
         );
     }

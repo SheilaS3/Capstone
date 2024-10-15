@@ -1,0 +1,74 @@
+.individual-clients-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+
+    .individual-client-wrapper {
+        position: relative;
+        padding: 60px;
+        
+
+        .individual-client {
+            border: 4px solid $light-green;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-self: center;
+            padding: 20px;
+            width: 400px;
+            height: 200px;
+            align-self: center;
+            justify-items: center;
+
+            .logo-name {
+                display: flex;
+                align-items: center;
+
+               
+                .name-lastname {
+                    margin-left: 20px;
+                    font-size: 1.5em;
+                }
+            }
+
+            .risk {
+                display: flex;
+                align-items: center;
+
+                .assigned-risk {
+                    font-size: 1.2em;
+                }
+
+                .risk-type {
+                    margin-left: 10px;
+                    font-weight: 800;
+                    font-size: 1.2em;
+                }
+            }
+
+            .kyc-time-to-expiration {
+                display: flex;
+                align-items: center;
+                font-size: 1.2em;
+            }
+
+            .id-time-to-expiration {
+                display: flex;
+                align-items: center;
+            }
+
+            .client-link {
+                display: flex;
+                align-items: center;
+
+                .link {
+                    text-decoration: none;
+                    font-weight: 900;
+                    color: $light-green;
+                    font-size: 1.2em;
+                }
+            }
+
+        }
+    }
+}
+

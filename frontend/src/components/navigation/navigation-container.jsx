@@ -37,8 +37,20 @@ export default class NavigationContainer extends Component {
 
                         {/*Temporary*/}
                         <div className="nav-link-wrapper">
+                            <NavLink to="/dashboard">
+                                Dashboard
+                            </NavLink>
+                        </div>
+
+                        <div className="nav-link-wrapper">
                             <NavLink to="/clients">
                                 Clients
+                            </NavLink>
+                        </div>
+                        
+                        <div className="nav-link-wrapper">
+                            <NavLink to="/new-client">
+                                New Client
                             </NavLink>
                         </div>
 

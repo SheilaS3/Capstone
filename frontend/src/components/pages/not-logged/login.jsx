@@ -16,7 +16,7 @@ export default class Login extends Component {
                         <input 
                             type="email"
                             name="email"
-                            placeholder="Your email"
+                            placeholder="Email"
                         />
                     </div>
 
@@ -26,7 +26,7 @@ export default class Login extends Component {
                         <input 
                             type="password"
                             name="password"
-                            placeholder="Your password"
+                            placeholder="Password"
                         />
                     </div>
 
