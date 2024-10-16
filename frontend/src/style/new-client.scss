@@ -1,13 +1,93 @@
-.new-client-wrapper {
+.new-client-form-wrapper{
 
-    .new-client-form-wrapper{
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: center;
+    .new-client {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        .new-client {
-            position: relative;
+        .title {
+            font-size: 1.5em;
+            align-items: center;        
         }
+
+        .new-client-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+
+            .form-group {
+                display: flex;
+                column-gap: 30px;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .entry-name {
+                    font-size: 1.2em;
+                    width: 250px;
+                }
+
+                input {
+                    font-family: "Mulish", sans-serif;
+                    color: $black;
+                    padding: 5px 0px;
+                    width: 100%;
+                    border-top: 0px;
+                    border-right: 0px;
+                    border-left: 0px;
+                    border-bottom: 1px solid $black;
+                    background-color: transparent;
+                    transition: 0.5s all ease-in-out;
+                    font-size: 1.1em;
+                    margin-bottom: 21px;
+            
+                    &:focus {
+                        outline: none;
+                        border-bottom: 1px solid $light-green;
+                    }
+                }
+
+                .select-element {
+                    font-family: "Mulish", sans-serif;
+                    color: $black;
+                    padding: 5px 0px;
+                    width: 100%;
+                    font-size: 1.1em;
+                }
+
+                ::placeholder {
+                    text-align: center;
+                    font-size: 1.1em;
+                }
+            }
+            
+            .btn {
+                cursor: pointer;
+                height: 42px;
+                width: 100%;
+                font-family: "Mulish", sans-serif;
+                font-size: 1em;
+                font-weight: 500;
+                border: 1px solid transparent;
+                transition: all 0.5s ease-in-out;
+                background-color: $black;
+                color: white;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-left: 300px;
+    
+                &:active, &:focus {
+                    outline: none;
+                }
+    
+                &:hover {
+                    background-color: $light-green;
+                }
+            }
+        }
+
+        
     }
+
     
 }
+    

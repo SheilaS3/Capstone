@@ -10,153 +10,155 @@ export default class NewClientForm extends Component {
                     </div>
 
                     <form className='new-client-form'>
-                        <div className="form-group">
-                            <div>
-                                Name:
+                        <div className='column'>
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Name:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="client-name"
+                                />
                             </div>
 
-                            <input 
-                                type="text"
-                                name="client-name"
-                            />
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Lastname:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="client-lastname"
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Person type:
+                                </div>
+                                
+                                <select
+                                    name='person-type'
+                                    className='select-element'  
+                                >
+                                    <option value="Natural">Natural</option>
+                                    <option value="Legal">Legal</option>
+                                </select>
+                            </div>
+
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    ID:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="client-id"
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    ID Expiry Date:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="client-id-expiry-date"
+                                    placeholder='YYYY-MM-DD'
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Country:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="country"
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Risk Country?:
+                                </div>
+                                
+                                <select
+                                    name='risk-country'
+                                    className='select-element'  
+                                >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <div className="form-group">
-                            <div>
-                                Lastname:
+                        <div className='column'>
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Activity:
+                                </div>
+
+                                <input 
+                                    type="text"
+                                    name="activity"
+                                />
                             </div>
 
-                            <input 
-                                type="text"
-                                name="client-lastname"
-                            />
-                        </div>
+                            <div className="form-group">
+                                <div className='entry-name'> 
+                                    Funds Origin:
+                                </div>
 
-                        <div className="form-group">
-                            <div>
-                                Person type:
-                            </div>
-                            
-                            <select
-                                name='person-type'
-                                className='select-element'  
-                            >
-                                <option value="Natural">Natural</option>
-                                <option value="Legal">Legal</option>
-                            </select>
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                ID:
+                                <input 
+                                    type="text"
+                                    name="funds-origin"
+                                />
                             </div>
 
-                            <input 
-                                type="text"
-                                name="client-id"
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                ID Expiry Date:
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Politically Exposed Person?:
+                                </div>
+                                
+                                <select
+                                    name='pep'
+                                    className='select-element'  
+                                >
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
                             </div>
 
-                            <input 
-                                type="text"
-                                name="client-id-expiry-date"
-                                placeholder='YYYY-MM-DD'
-                            />
-                        </div>
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Contract Date:
+                                </div>
 
-                        <div className="form-group">
-                            <div>
-                                Country:
+                                <input 
+                                    type="text"
+                                    name="contract-date"
+                                    placeholder='YYYY-MM-DD'
+                                />
                             </div>
 
-                            <input 
-                                type="text"
-                                name="country"
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                Risk Country?:
+                            <div className="form-group">
+                                <div className='entry-name'>
+                                    Assigned Risk:
+                                </div>
+                                
+                                <select
+                                    name='assigned-risk'
+                                    className='select-element'  
+                                >
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
                             </div>
-                            
-                            <select
-                                name='person-type'
-                                className='select-element'  
-                            >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                Activity:
-                            </div>
-
-                            <input 
-                                type="text"
-                                name="activity"
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                Funds Origin:
-                            </div>
-
-                            <input 
-                                type="text"
-                                name="funds-origin"
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                Politically Exposed Person?:
-                            </div>
-                            
-                            <select
-                                name='pep'
-                                className='select-element'  
-                            >
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
-                        </div>
-
-
-
-                        <div className="form-group">
-                            <div>
-                                Contract Date:
-                            </div>
-
-                            <input 
-                                type="text"
-                                name="contract-date"
-                                placeholder='YYYY-MM-DD'
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <div>
-                                Assigned Risk:
-                            </div>
-                            
-                            <select
-                                name='assigned-risk'
-                                className='select-element'  
-                            >
-                                <option value="Low">Low</option>
-                                <option value="Medium">Medium</option>
-                                <option value="High">High</option>
-                            </select>
                         </div>
 
                         <div>
