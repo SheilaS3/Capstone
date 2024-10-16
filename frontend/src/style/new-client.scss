@@ -1,0 +1,13 @@
+.new-client-wrapper {
+
+    .new-client-form-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+
+        .new-client {
+            position: relative;
+        }
+    }
+    
+}
