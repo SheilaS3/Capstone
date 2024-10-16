@@ -68,7 +68,7 @@ export default class Checker extends Component {
                                 target='_blank'
                             >
                                 <div className='title'>
-                                    Law 2/2023 "Protección del informante": Amends Law 10/2010
+                                    Law 2/2023 "Protección del Informante": Amends Law 10/2010
                                 </div>
                             </Link>
 
@@ -146,7 +146,7 @@ export default class Checker extends Component {
                                 target='_blank'
                             >
                                 <div className='title'>
-                                    Package of legislative proposals of the European Commission
+                                    Package of Legislative Proposals of the European Commission
                                 </div>
                             </Link>
 
@@ -202,33 +202,113 @@ export default class Checker extends Component {
                         </div>
                     </div>
                 </div>
+                <div className='column-2'>
+                    <div className='risk-countries-wrapper'>
+                        <div className='risk-countries'>
 
-                <div className='pep-list-wrapper'>
-                    <div className='pep-list'>
-                        <div className='pep-title'>
-                            POLITICALLY EXPOSED PERSON LISTS
+                            <div className='risk-countries-title'>
+                                RISK COUNTRIES
+                            </div>
+
+                            <div className='countries'>
+                                <div className='countries-links'>
+                                    <Link 
+                                        className='regulation-item'
+                                        to='https://www.boe.es/buscar/doc.php?id=DOUE-L-2024-80077'
+                                        target='_blank'
+                                    >
+                                        <div className='title'>
+                                            Delegated Regulation (EU) 2024/163 of the Comission
+                                        </div>
+                                    </Link>
+
+                                    <Link 
+                                        className='regulation-item'
+                                        to='https://www.consilium.europa.eu/es/press/press-releases/2024/10/08/taxation-antigua-and-barbuda-removed-from-the-eu-list-of-non-cooperative-jurisdictions-for-tax-purposes/'
+                                        target='_blank'
+                                    >
+                                        <div className='title'>
+                                            EU List of Non-cooperative Jurisdictions For Tax Purposes
+                                        </div>
+                                    </Link>
+
+                                    <Link 
+                                        className='regulation-item'
+                                        to='https://www.consilium.europa.eu/es/press/press-releases/2024/10/08/taxation-antigua-and-barbuda-removed-from-the-eu-list-of-non-cooperative-jurisdictions-for-tax-purposes/'
+                                        target='_blank'
+                                    >
+                                        <div className='title'>
+                                            EU International Sanctions
+                                        </div>
+                                    </Link>
+
+                                    <Link 
+                                        className='regulation-item'
+                                        to='https://www.consilium.europa.eu/es/press/press-releases/2024/10/08/taxation-antigua-and-barbuda-removed-from-the-eu-list-of-non-cooperative-jurisdictions-for-tax-purposes/'
+                                        target='_blank'
+                                    >
+                                        <div className='title'>
+                                            GAFI Risk Countries
+                                        </div>
+                                    </Link>
+
+                                    <div className='dmo-countries'>
+                                        <div className='dmo-countries-title'>
+                                            DMO COMMUNICATION COUNTRIES
+                                        </div>
+
+                                        <Link 
+                                            className='regulation-item'
+                                            to='https://www.boe.es/buscar/act.php?id=BOE-A-2023-3508'
+                                            target='_blank'
+                                        >
+                                            <div className='title'>
+                                                Order HFP/115/2023 Non Cooperative Jurisdictions
+                                            </div>
+                                        </Link>
+
+                                        <Link 
+                                            className='regulation-item'
+                                            to='https://www.boe.es/buscar/doc.php?id=BOE-A-2002-20934'
+                                            target='_blank'
+                                        >
+                                            <div className='title'>
+                                                Non Cooperative Countries (Orden ECO/2652/2002 + Order EHA/1464/2010)
+                                            </div>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div className='pep-links'>
-                            <Link 
-                                className='regulation-item'
-                                to='https://www.tesoro.es/sites/default/files/publicaciones/Lista%20de%20PRP%20de%20la%20Uni%C3%B3n%20Europea.pdf'
-                                target='_blank'
-                            >
-                                <div className='title'>
-                                    European Union PEP list
-                                </div>
-                            </Link>
+                    </div>
 
-                            <Link 
-                                className='regulation-item'
-                                to='https://www.tesoro.es/sites/default/files/publicaciones/LISTA%20PEPs%20ACTUALIZADA.pdf'
-                                target='_blank'
-                            >
-                                <div className='title'>
-                                    Spanish Teasury PEP list
-                                </div>
-                            </Link>
+                    <div className='pep-list-wrapper'>
+                        <div className='pep-list'>
+                            <div className='pep-title'>
+                                POLITICALLY EXPOSED PERSON LISTS
+                            </div>
+                            
+                            <div className='pep-links'>
+                                <Link 
+                                    className='regulation-item'
+                                    to='https://www.tesoro.es/sites/default/files/publicaciones/Lista%20de%20PRP%20de%20la%20Uni%C3%B3n%20Europea.pdf'
+                                    target='_blank'
+                                >
+                                    <div className='title'>
+                                        European Union PEP List
+                                    </div>
+                                </Link>
+
+                                <Link 
+                                    className='regulation-item'
+                                    to='https://www.tesoro.es/sites/default/files/publicaciones/LISTA%20PEPs%20ACTUALIZADA.pdf'
+                                    target='_blank'
+                                >
+                                    <div className='title'>
+                                        Spanish Teasury PEP List
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

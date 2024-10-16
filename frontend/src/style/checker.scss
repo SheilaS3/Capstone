@@ -1,0 +1,183 @@
+.checker-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+    padding: 40px;
+    margin-right: -50px;
+
+    .regulation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+
+        .spanish-regulation {
+            margin-right: 100px;
+            margin-left: 40px;
+
+            .spanish-regulation-title {
+                font-size: 2em;
+                margin-bottom: 10px;
+                font-weight: 900;
+            }
+
+            .spanish-regulation-links {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+
+                .regulation-item {
+                    background-color: #59c9bb;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                }
+
+                .title {
+                    color: $black;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .eu-regulation {
+            margin-right: 100px;
+            margin-left: 40px;
+
+            .eu-regulation-title {
+                font-size: 2em;
+                margin-bottom: 10px;
+                font-weight: 900;
+            }
+
+            .eu-regulation-links {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+
+                .regulation-item {
+                    background-color: #59c9bb;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                }
+
+                .title {
+                    color: $black;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .column-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+
+        .risk-countries-wrapper {
+            margin-right: 100px;
+            margin-left: 40px;
+            margin-top: -50px;
+
+            .risk-countries-title {
+                font-size: 2em;
+                margin-bottom: 10px;
+                font-weight: 900;
+            }
+
+            .countries-links {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+
+                .regulation-item {
+                    background-color: #59c9bb;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                }
+
+                .title {
+                    color: $black;
+                    font-weight: 500;
+                }
+
+                .dmo-countries{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    row-gap: 10px;
+
+                    .regulation-item {
+                        background-color: #59c9bb;
+                        padding: 10px;
+                        border-radius: 10px;
+
+                        &:hover {
+                            background-color: $light-green;
+                        }
+                    }
+
+                    .dmo-countries-title {
+                        color: $black;
+                        font-weight: 800;
+                        font-size: 1.2em;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .pep-list-wrapper {
+            margin-right: 100px;
+            margin-left: 40px;
+
+            .pep-title {
+                font-size: 2em;
+                margin-bottom: 10px;
+                font-weight: 900;
+            }
+
+            .pep-links {
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 10px;
+
+                .regulation-item {
+                    background-color: #59c9bb;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: $light-green;
+                    }
+                }
+
+                .title {
+                    color: $black;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+
+
+
+    .regulation-item {
+        text-decoration: none;
+    }
+
+    .title {
+        font-size: 1.1em;
+    }
+    
+}
