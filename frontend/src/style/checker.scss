@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     column-gap: 40px;
     padding: 40px;
-    margin-right: -50px;
+    
 
     .regulation {
         display: grid;
@@ -12,7 +12,11 @@
 
         .spanish-regulation {
             margin-right: 100px;
-            margin-left: 40px;
+            margin-left: 60px;
+            border: 1px solid $black;
+            border-radius: 10px;
+            padding: 20px;
+            height: 530px;
 
             .spanish-regulation-title {
                 font-size: 2em;
@@ -43,8 +47,11 @@
         }
 
         .eu-regulation {
-            margin-right: 100px;
+            margin-right: 80px;
             margin-left: 40px;
+            border: 1px solid $black;
+            border-radius: 10px;
+            padding: 20px;
 
             .eu-regulation-title {
                 font-size: 2em;
@@ -82,8 +89,11 @@
 
         .risk-countries-wrapper {
             margin-right: 100px;
-            margin-left: 40px;
+            margin-left: 60px;
             margin-top: -50px;
+            border: 1px solid $black;
+            border-radius: 10px;
+            padding: 20px;
 
             .risk-countries-title {
                 font-size: 2em;
@@ -137,8 +147,12 @@
         }
 
         .pep-list-wrapper {
-            margin-right: 100px;
+            margin-right: 80px;
             margin-left: 40px;
+            border: 1px solid $black;
+            border-radius: 10px;
+            padding: 20px;
+            height: 145px;
 
             .pep-title {
                 font-size: 2em;
