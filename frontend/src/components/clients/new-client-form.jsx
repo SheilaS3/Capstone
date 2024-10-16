@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class NewClientForm extends Component {
     constructor() {
@@ -24,8 +25,34 @@ export default class NewClientForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    buildForm() {
+        let formData = new FormData();
+
+        formData.append("[assigned_risk]", this.state.assigned_risk);
+        formData.append("[activity]", this.state.activity);
+        formData.append("[contract_date]", this.state.contract_date);
+        formData.append("[country]", this.state.country);
+        formData.append("[country_risk]", this.state.country_risk);
+        formData.append("[funds_origin]", this.state.funds_origin);
+        formData.append("[id_number]", this.state.id_number);
+        formData.append("[id_number_expiry_date]", this.state.id_number_expiry_date);
+        formData.append("[lastname]", this.state.lastname);
+        formData.append("[name]", this.state.name);
+        formData.append("[pep]", this.state.pep);
+        formData.append("[person_type]", this.state.person_type);
+
+        return formData;
+    }
+
     handleSubmit(event) {
-        this.handleSuccessfullClientSubmision(this.state);
+        axios
+        .post("http://localhost:5000/client", this.buildForm())
+        .then(response => {
+            this.handleSuccessfullClientSubmision(response.data);
+        }).catch(error => {
+            console.log("handleSubmit", error);
+        });
+
         event.preventDefault();
     }
 
