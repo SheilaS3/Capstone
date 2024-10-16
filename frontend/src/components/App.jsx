@@ -9,6 +9,7 @@ import Contact from './pages/not-logged/contact';
 import Login from './pages/not-logged/login';
 
 import Dashboard from './pages/logged/dashboard';
+import Checker from './pages/logged/checker';
 import Clients from './pages/logged/clients';
 import NewClient from './pages/logged/new-client';
 import Icons from './helpers/icons';
@@ -39,6 +40,7 @@ class App extends Component {
                             <Route path="/login" element={<Login/>} />
 
                             <Route path="/dashboard" element={<Dashboard/>} />
+                            <Route path="/checker" element={<Checker/>} />
                             <Route path="/clients" element={<Clients/>} />
                             <Route exact path="/clients/:slug" element={<ClientDetail/>} />
                             <Route path="/new-client" element={<NewClient/>} />

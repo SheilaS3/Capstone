@@ -43,6 +43,12 @@ export default class NavigationContainer extends Component {
                         </div>
 
                         <div className="nav-link-wrapper">
+                            <NavLink to="/checker">
+                                Checker
+                            </NavLink>
+                        </div>
+
+                        <div className="nav-link-wrapper">
                             <NavLink to="/clients">
                                 Clients
                             </NavLink>
