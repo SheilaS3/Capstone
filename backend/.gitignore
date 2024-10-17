@@ -1,5 +1,5 @@
-templates
-static
-__pycache__
+templates/
+static/
+__pycache__/
 Pipfile.lock
 Pipfile
