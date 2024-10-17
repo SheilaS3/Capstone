@@ -44,10 +44,6 @@ function IndividualClient(props) {
                 <div className='id-time-to-expiration'>
                     {`${person_type === "Natural" ? "ID renovation:" : ""} ${person_type === "Natural" ? moment(id_number_expiry_date, "YYYYMMDD").fromNow() : ""}`}
                 </div>
-
-                <div className='client-link'>
-                    <Link className='link' to={`/clients/${id_number}`}>GO TO FILE</Link>
-                </div>
             </div>
         </div>
     );
