@@ -25,7 +25,7 @@ export default class ClientsContainer extends Component {
     }
 
     getClients(filter = null) {
-        axios.get("http://localhost:5000/clients")
+        axios.get("https://aml-kyc-backend.onrender.com/clients")
         .then(response => {
             if (filter) {
                 this.setState({

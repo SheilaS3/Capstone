@@ -46,7 +46,7 @@ export default class NewClientForm extends Component {
 
     handleSubmit(event) {
         axios
-        .post("http://localhost:5000/client", this.buildForm())
+        .post("https://aml-kyc-backend.onrender.com/client", this.buildForm())
         .then(response => {
             this.handleSuccessfullClientSubmision(response.data);
         }).catch(error => {
